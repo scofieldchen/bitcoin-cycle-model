@@ -1,19 +1,20 @@
 import datetime as dt
 from pathlib import Path
 
-from downloader.alternative import download_fear_greed_index
-from downloader.blockchain import download_blockchain_metrics
-from downloader.funding_rate import download_funding_rate
-from downloader.ohlcv import download_ohlcv
-from downloader.sentiment import download_lsr
 from rich.console import Console
+
+from src.downloader.alternative import download_fear_greed_index
+from src.downloader.bgeometrics import download_blockchain_metrics
+from src.downloader.binance_funding import download_funding_rate
+from src.downloader.binance_lsr import download_lsr
+from src.downloader.yahoo_finance import download_ohlcv
 
 console = Console()
 
 
 def main() -> None:
     # 参数
-    data_directory = Path("/users/scofield/quant-research/notebooks/bitcoin_cycle/data")
+    data_directory = Path("./data")
 
     # 创建数据目录
     data_directory.mkdir(parents=True, exist_ok=True)
