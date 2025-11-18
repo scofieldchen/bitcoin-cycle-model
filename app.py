@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.5"
+__generated_with = "0.17.8"
 app = marimo.App(width="medium")
 
 
@@ -22,9 +22,9 @@ def _():
     import plotly.io as pio
     from plotly.subplots import make_subplots
 
-    import signals
-    from signals.utils import calculate_percentile_bands
-    from signals.indicators import find_trend_periods
+    from src import signals
+    from src.signals.utils import calculate_percentile_bands
+    from src.signals.indicators import find_trend_periods
 
     pio.renderers.default = "plotly_mimetype"
     return (
@@ -82,7 +82,7 @@ def _(pd):
 @app.cell
 def _(List, Path, mo, np, pd, read_metrics, signals):
     # 数据文件夹
-    data_dir = Path("/users/scofield/quant-research/notebooks/bitcoin_cycle/data")
+    data_dir = Path("./data")
 
     # 比特币数据路径
     btcusd_filepath = data_dir / "btcusd.csv"
