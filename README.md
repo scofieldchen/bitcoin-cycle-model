@@ -49,20 +49,26 @@ bitcoin-cycle-model/
 ├── notebooks/            # 策略研究与实验脚本
 ├── app.py                # Marimo 交互式看板入口
 └── download_data.py      # 一键数据同步脚本
+```
 
 🚦 快速开始
+
 1. **安装依赖**:
-   ```bash
-   uv sync
-   ```
+
+```bash
+uv sync
+```
+
 2. **同步数据**:
-   ```bash
-   python download_data.py
-   ```
+```bash
+python download_data.py
+```
+
 3. **启动看板**:
-   ```bash
-   marimo run app.py
-   ```
+
+```bash
+marimo run app.py
+```
 
 ![](assets/image01.png)
 
